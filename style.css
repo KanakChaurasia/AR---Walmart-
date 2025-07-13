@@ -126,6 +126,7 @@ nav ul li a:hover {
   padding: 0.2rem 0.5rem;
   border-radius: 5px;
   margin-left: 0.5rem;
+  max-width: 1rem;
 }
 
 .slide p {
@@ -136,9 +137,11 @@ nav ul li a:hover {
 .slide-img img {
   cursor: pointer;
   max-width: 250px;
+  max-height: 250px;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease;
+  margin-bottom: 0.5rem;
 }
 
 .slide-img img:hover {
