@@ -72,7 +72,7 @@ nav ul li a:hover {
     position: absolute;
     top: 60px;
     right: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     border-radius: 8px;
   }
@@ -134,9 +134,15 @@ nav ul li a:hover {
 }
 
 .slide-img img {
+  cursor: pointer;
   max-width: 250px;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.slide-img img:hover {
+  transform: scale(1.25);
 }
 
 .try-btn {
@@ -167,7 +173,7 @@ nav ul li a:hover {
   border: none;
   padding: 10px 15px;
   margin: 0 5px;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   border-radius: 50%;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -178,26 +184,39 @@ nav ul li a:hover {
 }
 
 /* ✅ Responsive */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 588px) {
   .slide {
     flex-direction: column;
     text-align: center;
   }
 
   .slide-img img {
-    max-width: 80%;
+    max-width: 60%;
     margin-top: 1rem;
   }
 
   .slides-container {
-    width: 560px;
+    width: 395px;
+  }
+
+  .slide h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .slide h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
   }
 }
-
 
 .section {
   padding: 3rem 1rem;
   text-align: center;
+}
+
+.section h2{
+  padding: 1rem;
 }
 
 .card-grid {
