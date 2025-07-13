@@ -82,37 +82,118 @@ nav ul li a:hover {
   }
 }
 
-.hero {
-  text-align: center;
-  padding: 5rem 2rem;
-  background-color: #64748b;
+.hero-slider {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
   color: white;
+  padding: 2rem 1rem;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
+.slides-container {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+  width: 300%;
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+.slide-text {
+  max-width: 400px;
+}
+
+.slide h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.slide h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.slide .discount {
+  background-color: #ff4b5c;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  margin-left: 0.5rem;
+}
+
+.slide p {
+  font-size: 1rem;
   margin-bottom: 1rem;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-
-.hero-buttons button {
-  padding: 0.75rem 1.2rem;
-  margin: 0.5rem;
-  background-color: #3b82f6;
-  border: none;
-  color: white;
+.slide-img img {
+  max-width: 250px;
   border-radius: 12px;
-  font-weight: 500;
-  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-.hero-buttons button:hover {
-  background-color: #2563eb;
+.try-btn {
+  display: inline-block;
+  background: linear-gradient(to right, #ff512f, #dd2476);
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(255, 81, 47, 0.4);
+  transition: all 0.3s ease;
 }
+
+.try-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 81, 47, 0.6);
+}
+
+.slider-controls {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.slider-controls button {
+  background-color: #00adb5;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  font-size: 1.4rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.slider-controls button:hover {
+  background-color: #007b80;
+}
+
+/* ✅ Responsive */
+@media screen and (max-width: 768px) {
+  .slide {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .slide-img img {
+    max-width: 80%;
+    margin-top: 1rem;
+  }
+
+  .slides-container {
+    width: 560px;
+  }
+}
+
 
 .section {
   padding: 3rem 1rem;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Walmart AR Shopping</title>
@@ -7,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <header>
@@ -21,15 +23,56 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>Experience AR Shopping</h1>
-    <p>Visualize Furniture. Try Shoes & Clothes. Watch Product Videos.</p>
-    <div class="hero-buttons">
-      <button onclick="scrollToSection('furniture')">Furniture</button>
-      <button onclick="scrollToSection('shoes')">Shoes</button>
-      <button onclick="scrollToSection('clothes')">Clothes</button>
+  <section class="hero-slider">
+    <div class="slides-container" id="slider">
+      <!-- Slide 1 -->
+      <div class="slide">
+        <div class="slide-text">
+          <h2>🔥 Deal of the Day</h2>
+          <h3>Stylish Denim Jacket <span class="discount">40% OFF</span></h3>
+          <p>Try the latest AR experience now!</p>
+          <a href="https://snapchat.com/your-ar-link-jacket" target="_blank" class="try-btn">👕 Try On</a>
+        </div>
+        <div class="slide-img">
+          <img src="https://i.imgur.com/SrdiYOe.jpg" alt="Denim Jacket">
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide">
+        <div class="slide-text">
+          <h2>🧥 Exclusive Hoodie</h2>
+          <h3>Comfy & Cool <span class="discount">30% OFF</span></h3>
+          <p>Try before you buy using AR!</p>
+          <a href="https://snapchat.com/your-ar-link-hoodie" target="_blank" class="try-btn">🧥 Try On</a>
+        </div>
+        <div class="slide-img">
+          <img src="https://i.imgur.com/YFqNRR1.jpg" alt="Hoodie">
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide">
+        <div class="slide-text">
+          <h2>👟 New Arrivals</h2>
+          <h3>Modern Sneakers <span class="discount">25% OFF</span></h3>
+          <p>Experience them live in AR now.</p>
+          <a href="https://snapchat.com/your-ar-link-sneakers" target="_blank" class="try-btn">👟 Try On</a>
+        </div>
+        <div class="slide-img">
+          <img src="https://i.imgur.com/nrmWmXI.jpg" alt="Sneakers">
+        </div>
+      </div>
+    </div>
+
+    <!-- Manual controls -->
+    <div class="slider-controls">
+      <button id="prevSlide">←</button>
+      <button id="nextSlide">→</button>
     </div>
   </section>
+
+
 
   <section id="furniture" class="section">
     <h2>🪑 3D Furniture Visualization</h2>
@@ -37,27 +80,37 @@
       <div class="card">
         <img src="./assets/sofa2.jpg" alt="Sofa">
         <h3>Elegant Sofa</h3>
-        <button class="action-btn" onclick="openAR('https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=75e76ee4123144439a50bead8f3430c4&metadata=01')">View in Room</button>
+        <button class="action-btn"
+          onclick="openAR('https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=75e76ee4123144439a50bead8f3430c4&metadata=01')">View
+          in Room</button>
       </div>
       <div class="card">
         <img src="./assets/diningtable.jpg" alt="Chair">
         <h3>Dining Table</h3>
-        <button class="action-btn" onclick="openAR('https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=c1190ad04b3a47e48b4f7bda96aa5a0a&metadata=01')">View in Room</button>
+        <button class="action-btn"
+          onclick="openAR('https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=c1190ad04b3a47e48b4f7bda96aa5a0a&metadata=01')">View
+          in Room</button>
       </div>
       <div class="card">
         <img src="./assets/chair1.jpg" alt="Chair">
         <h3>Comfort Chair</h3>
-        <button class="action-btn" onclick="openAR('https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=7b961e5d1ead411583f02bc7da6d300c&metadata=01')">View in Room</button>
+        <button class="action-btn"
+          onclick="openAR('https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=7b961e5d1ead411583f02bc7da6d300c&metadata=01')">View
+          in Room</button>
       </div>
       <div class="card">
         <img src="./assets/centertable.jpg" alt="Chair">
         <h3>Modern table</h3>
-        <button class="action-btn" onclick="openAR('https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=0e522ffc176c4b528e39179c542dc9ba&metadata=01')">View in Room</button>
+        <button class="action-btn"
+          onclick="openAR('https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=0e522ffc176c4b528e39179c542dc9ba&metadata=01')">View
+          in Room</button>
       </div>
       <div class="card">
         <img src="./assets/rotatechair.jpg" alt="Table">
         <h3>Rotating Chair</h3>
-        <button class="action-btn" onclick="openAR('https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=659d40745bc242bbb231685b3867024f&metadata=01')">View in Room</button>
+        <button class="action-btn"
+          onclick="openAR('https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=659d40745bc242bbb231685b3867024f&metadata=01')">View
+          in Room</button>
       </div>
     </div>
   </section>
@@ -68,38 +121,40 @@
       <div class="card">
         <img src="https://i.imgur.com/w1URWYM.jpg" alt="Running Shoes">
         <h3>Running Shoes</h3>
-        <button class="action-btn" onclick="openAR('https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=12ced5e2cb5348eeb3822394b68ca0dd&metadata=01')">Try in AR</button>
+        <button class="action-btn"
+          onclick="openAR('https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=12ced5e2cb5348eeb3822394b68ca0dd&metadata=01')">Try
+          in AR</button>
       </div>
       <div class="card">
         <img src="https://i.imgur.com/nrmWmXI.jpg" alt="Sneakers">
         <h3>Stylish Sneakers</h3>
-        <button class="action-btn" onclick="openAR('https://snapchat.com/your-ar-link-sneakers')">Try in AR</button>
-      </div>
-      <div class="card">
-        <img src="https://i.imgur.com/ohUXsXs.jpg" alt="Formal Shoes">
-        <h3>Formal Shoes</h3>
-        <button class="action-btn" onclick="openAR('https://snapchat.com/your-ar-link-formal-shoes')">Try in AR</button>
+        <button class="action-btn" onclick="openAR('https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=d73b4b7a57034f778f431952e5e514c0&metadata=01')">Try in AR</button>
       </div>
     </div>
   </section>
 
   <section id="clothes" class="section">
-    <h2>👕 Try-On Clothes</h2>
+    <h2> Clothing & Accessories </h2>
     <div class="card-grid">
       <div class="card">
-        <img src="https://i.imgur.com/v3JTWv2.jpg" alt="T-shirt">
-        <h3>AR T-shirt</h3>
-        <button class="action-btn" onclick="openAR('https://snapchat.com/your-ar-link-tshirt')">Try in AR</button>
+        <img src="./assets/cat_eye.jpg" alt="T-shirt">
+        <h3>Cat Eye Glare</h3>
+        <button class="action-btn" onclick="openAR('https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=ac386e8ed2494c4bb107b4bc502236b2&metadata=01')">Try in AR</button>
       </div>
       <div class="card">
-        <img src="https://i.imgur.com/YFqNRR1.jpg" alt="Hoodie">
-        <h3>Comfy Hoodie</h3>
-        <button class="action-btn" onclick="openAR('https://snapchat.com/your-ar-link-hoodie')">Try in AR</button>
+        <img src="./assets/couple_glare.jpg" alt="Hoodie">
+        <h3>Stylish Couple Glare</h3>
+        <button class="action-btn" onclick="openAR('https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=d74fd73b73084225a785d5430f6e9f1e&metadata=01')">Try in AR</button>
       </div>
       <div class="card">
-        <img src="https://i.imgur.com/SrdiYOe.jpg" alt="Jacket">
-        <h3>Stylish Jacket</h3>
-        <button class="action-btn" onclick="openAR('https://snapchat.com/your-ar-link-jacket')">Try in AR</button>
+        <img src="./assets/hoodie.jpg" alt="Jacket">
+        <h3>Stylish Hoodie</h3>
+        <button class="action-btn" onclick="openAR('https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=671ee42a3e0948d2aa610d2d3761f846&metadata=01')">Try in AR</button>
+      </div>
+      <div class="card">
+        <img src="./assets/earings.jpg" alt="Jacket">
+        <h3>Earings</h3>
+        <button class="action-btn" onclick="openAR('https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=7ef3724d45d14e42ae68453011483c06&metadata=01')">Try in AR</button>
       </div>
     </div>
   </section>
@@ -121,8 +176,33 @@
       const navMenu = document.getElementById('nav-menu');
       navMenu.classList.toggle('show');
     }
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const slider = document.getElementById('slider');
+
+    function showSlide(index) {
+      currentSlide = (index + slides.length) % slides.length;
+      slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    document.getElementById('nextSlide').addEventListener('click', () => {
+      showSlide(currentSlide + 1);
+    });
+
+    document.getElementById('prevSlide').addEventListener('click', () => {
+      showSlide(currentSlide - 1);
+    });
+
+    // Auto slide every 5 seconds
+    setInterval(() => {
+      showSlide(currentSlide + 1);
+    }, 5000);
+
+
   </script>
 
 </body>
+
 </html>
-" " 
+" "
